@@ -30,10 +30,14 @@ public class HomePage extends BasePage {
         searchInput.sendKeys(Keys.ENTER);
     }
 
-    public void selectPythonCourse(){
-        log.info("PAGE: Selecting the first python course");
+    public void hoverExplore(){
+        log.info("PAGE: Hover over explore link");
         Actions action = new Actions(driver);
         action.moveToElement(exploreButton).perform();
+    }
+
+    public void selectPython(String category){
+        log.info("PAGE: Selecting "+category+" from explore");
         wait.until(ExpectedConditions.elementToBeClickable(pythonLink)).click();
     }
 
