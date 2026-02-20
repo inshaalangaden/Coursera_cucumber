@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class CourseSearchSteps {
+public class CourseSearchSteps{
     DriverFactory df = new DriverFactory();
     HomePage hp = new HomePage(df.getDriver());
     SearchResultPage srp = new SearchResultPage(df.getDriver());

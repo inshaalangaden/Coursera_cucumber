@@ -12,7 +12,7 @@ public class DriverFactory {
     protected final Logger log = LogManager.getLogger(this.getClass());
     protected static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
     protected static ThreadLocal<String> browserThread = new ThreadLocal<>();
-    WebDriver localDriver;
+    protected WebDriver localDriver;
 
     public static WebDriver getDriver(){
         return driverThread.get();
