@@ -10,19 +10,19 @@ import java.time.Duration;
 
 public class DriverFactory {
     protected final Logger log = LogManager.getLogger(this.getClass());
-    protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    protected static ThreadLocal<String> browser = new ThreadLocal<>();
+    protected static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
+    protected static ThreadLocal<String> browserThread = new ThreadLocal<>();
+    WebDriver localDriver;
 
-    public WebDriver getDriver(){
-        return driver.get();
+    public static WebDriver getDriver(){
+        return driverThread.get();
     }
-    public String getBrowser(){
-        return browser.get();
+    public static String getBrowser(){
+        return browserThread.get();
     }
 
-    public void intializeDriver(String browserName){
-        browser.set(browserName);
-        WebDriver localDriver;
+    public void initializeDriver(String browserName){
+        browserThread.set(browserName);
         if(browserName.equalsIgnoreCase("chrome")){
             log.info("Setting up the browser: CHROME");
             localDriver = new ChromeDriver();
@@ -32,16 +32,16 @@ public class DriverFactory {
         }else{
             throw new RuntimeException("Browser not supported");
         }
-        driver.set(localDriver);
-        getDriver().get("https://www.coursera.org/");
-        getDriver().manage().window().maximize();
-        getDriver().manage().deleteAllCookies();
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driverThread.set(localDriver);
+        localDriver.get("https://www.coursera.org/");
+        localDriver.manage().window().maximize();
+        localDriver.manage().deleteAllCookies();
+        localDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     public void quitDriver(){
         log.info("Closing the browser");
-        if(getDriver() != null) getDriver().quit();
-        driver.remove();
+        if(localDriver != null) localDriver.quit();
+        driverThread.remove();
     }
 }
