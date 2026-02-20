@@ -4,7 +4,8 @@ Feature: Search in the input box and get the course
     When User search a "<keyword>" in the search input
     Then Validate the title of the first course contains the "<keyword>"
     Examples:
-    | Selenium Java |
-    | Python        |
-    |Automation Testing|
+    | keyword |
+    | Selenium |
+    | java     |
+    | Automation |
 

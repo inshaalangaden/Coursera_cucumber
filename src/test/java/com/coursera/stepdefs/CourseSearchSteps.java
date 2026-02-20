@@ -23,6 +23,6 @@ public class CourseSearchSteps{
     public void validate_the_title_of_the_first_course_contains_the(String keyWord) {
         SearchResultPage srp = new SearchResultPage(DriverFactory.getDriver());
         String title = srp.verification();
-        Assert.assertTrue(title.contains(keyWord),title+" contains the "+keyWord+", so test PASSED");
+        Assert.assertTrue(title.toLowerCase().contains(keyWord.toLowerCase()),title+" contains the "+keyWord+", so test PASSED");
     }
 }

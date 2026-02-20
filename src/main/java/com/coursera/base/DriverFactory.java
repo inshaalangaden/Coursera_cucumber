@@ -1,7 +1,5 @@
 package com.coursera.base;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -9,10 +7,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import java.time.Duration;
 
 public class DriverFactory {
-    protected final Logger log = LogManager.getLogger(this.getClass());
+    //protected static final Logger log = LogManager.getLogger(this.getClass());
     protected static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
     protected static ThreadLocal<String> browserThread = new ThreadLocal<>();
-    protected WebDriver localDriver;
 
     public static WebDriver getDriver(){
         return driverThread.get();
@@ -21,17 +18,23 @@ public class DriverFactory {
         return browserThread.get();
     }
 
-    public void initializeDriver(String browserName){
-        browserThread.set(browserName);
-        if(browserName.equalsIgnoreCase("chrome")){
-            log.info("Setting up the browser: CHROME");
+    public static void setBrowserName(String browser) {
+        browserThread.set(browser);
+    }
+
+    public static void initializeDriver(){
+        WebDriver localDriver;
+
+        if(getBrowser().equalsIgnoreCase("chrome")){
+            //log.info("Setting up the browser: CHROME");
             localDriver = new ChromeDriver();
-        } else if (browserName.equalsIgnoreCase("edge")) {
-            log.info("Setting up the browser: EDGE");
+        } else if (getBrowser().equalsIgnoreCase("edge")) {
+            //log.info("Setting up the browser: EDGE");
             localDriver = new EdgeDriver();
         }else{
             throw new RuntimeException("Browser not supported");
         }
+
         driverThread.set(localDriver);
         getDriver().get("https://www.coursera.org/");
         getDriver().manage().window().maximize();
@@ -39,8 +42,8 @@ public class DriverFactory {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    public void quitDriver(){
-        log.info("Closing the browser");
+    public static void quitDriver(){
+        //log.info("Closing the browser");
         if(getDriver() != null) getDriver().quit();
         driverThread.remove();
     }
