@@ -33,15 +33,15 @@ public class DriverFactory {
             throw new RuntimeException("Browser not supported");
         }
         driverThread.set(localDriver);
-        localDriver.get("https://www.coursera.org/");
-        localDriver.manage().window().maximize();
-        localDriver.manage().deleteAllCookies();
-        localDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        getDriver().get("https://www.coursera.org/");
+        getDriver().manage().window().maximize();
+        getDriver().manage().deleteAllCookies();
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     public void quitDriver(){
         log.info("Closing the browser");
-        if(localDriver != null) localDriver.quit();
+        if(getDriver() != null) getDriver().quit();
         driverThread.remove();
     }
 }

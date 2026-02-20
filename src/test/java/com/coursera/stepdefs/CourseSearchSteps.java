@@ -9,9 +9,6 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 
 public class CourseSearchSteps{
-    DriverFactory df = new DriverFactory();
-    HomePage hp = new HomePage(df.getDriver());
-    SearchResultPage srp = new SearchResultPage(df.getDriver());
 
     @Given("User is on the Home page")
     public void user_is_on_the_home_page() {
@@ -19,10 +16,12 @@ public class CourseSearchSteps{
     }
     @When("User search a {string} in the search input")
     public void user_search_a_in_the_search_input(String keyWord) {
+        HomePage hp = new HomePage(DriverFactory.getDriver());
         hp.search(keyWord);
     }
     @Then("Validate the title of the first course contains the {string}")
     public void validate_the_title_of_the_first_course_contains_the(String keyWord) {
+        SearchResultPage srp = new SearchResultPage(DriverFactory.getDriver());
         String title = srp.verification();
         Assert.assertTrue(title.contains(keyWord),title+" contains the "+keyWord+", so test PASSED");
     }
