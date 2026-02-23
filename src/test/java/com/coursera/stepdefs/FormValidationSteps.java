@@ -41,7 +41,8 @@ public class FormValidationSteps {
     public void fillTheFormWithExcelRow(String rowNo) throws IOException {
 
         int rowIndex = Integer.parseInt(rowNo)-1;
-        int currentRow = Integer.parseInt(rowNo);
+        currentRow = Integer.parseInt(rowNo);
+        System.out.println("current row = "+currentRow);
 
         Object[][] data = ExcelUtils.getTestData(filePath,sheetName);
         Object[] row = data[rowIndex];
