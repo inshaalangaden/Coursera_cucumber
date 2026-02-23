@@ -1,0 +1,23 @@
+23-02-2026 14:41:11 INFO  HomePage           - PAGE: Searching for: Selenium
+23-02-2026 14:41:15 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+23-02-2026 14:41:23 INFO  HomePage           - PAGE: Searching for: java
+23-02-2026 14:41:32 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+23-02-2026 14:41:40 INFO  HomePage           - PAGE: Searching for: Automation
+23-02-2026 14:41:44 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+23-02-2026 14:41:52 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 14:42:00 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 14:42:05 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 14:42:07 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 14:42:08 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 14:42:27 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 14:42:32 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 14:42:37 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 14:42:39 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 14:42:39 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 14:43:00 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 14:43:08 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 14:43:11 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 14:43:14 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 14:43:14 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 14:43:24 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 14:43:26 INFO  UniversityPage     - PAGE: Click contactUs button
