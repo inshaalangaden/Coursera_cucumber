@@ -71,5 +71,7 @@ public class ExcelUtils {
         try (FileOutputStream fos = new FileOutputStream(filePath)) {
             workbook.write(fos);
         }
+
+        workbook.close();
     }
 }

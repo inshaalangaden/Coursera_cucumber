@@ -69,8 +69,16 @@ public class FormValidationSteps {
     public void validateAlertBehaviorBasedOnTheExcelTestType() throws IOException {
         boolean alertPresent = fp.isAlertPresent();
 
-        if(testType.equalsIgnoreCase("positive")) testPassed = !alertPresent;
-        else testPassed = alertPresent;
+        if(testType.equalsIgnoreCase("positive")){
+            testPassed = !alertPresent;
+            resultMessage = testPassed ? "PASS" : "FAIL";
+        }
+        else{
+            testPassed = alertPresent;
+            resultMessage = testPassed ? "PASS" : "FAIL";
+        }
+
+
 
         ExcelUtils.setCellData(filePath, sheetName, currentRow, resultMessage,DriverFactory.getBrowser());
 
