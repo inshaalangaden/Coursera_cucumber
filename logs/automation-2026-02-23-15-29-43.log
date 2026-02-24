@@ -1,0 +1,49 @@
+23-02-2026 15:29:43 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:29:48 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:29:51 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:29:53 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:29:53 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:29:57 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:30:01 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:30:03 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:30:04 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:30:15 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:30:20 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:30:23 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:30:24 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:30:27 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:30:27 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:30:28 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:30:32 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:30:34 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:30:34 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:30:48 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:30:54 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:30:54 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:30:59 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:31:01 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:31:02 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:31:02 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:31:04 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:31:05 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:31:06 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:31:12 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:31:18 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:31:18 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:31:22 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:31:24 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:31:25 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:31:25 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:31:27 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:31:29 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:31:29 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:31:34 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:31:40 INFO  HomePage           - PAGE: Navigating to forUniversities page
+23-02-2026 15:31:40 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:31:45 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:31:45 INFO  UniversityPage     - PAGE: Click contactUs button
+23-02-2026 15:31:48 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:31:48 INFO  FormPage           - PAGE: Return the alert
+23-02-2026 15:31:48 INFO  FormPage           - PAGE: Filling the form
+23-02-2026 15:31:50 INFO  FormPage           - PAGE: Click submit button
+23-02-2026 15:31:50 INFO  FormPage           - PAGE: Return the alert

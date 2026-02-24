@@ -1,0 +1,5 @@
+24-02-2026 12:42:46 INFO  HomePage           - PAGE: Hover over explore link
+24-02-2026 12:42:46 INFO  HomePage           - PAGE: Selecting Python from explore
+24-02-2026 12:42:50 INFO  PythonPage         - PAGE: Click the first course
+24-02-2026 12:42:50 INFO  PythonPage         - PAGE: Switching tab after clicking first Python course
+24-02-2026 12:42:50 INFO  PythonPage         - PAGE: Printing the level of the course in console

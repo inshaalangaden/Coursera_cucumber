@@ -9,11 +9,16 @@ import org.testng.annotations.Parameters;
 
 @CucumberOptions(features = "src/test/resources/features",
         glue = {"com.coursera.stepdefs","com.coursera.hooks"},
-        monochrome = true)
+        monochrome = true, plugin = {
+        "pretty",
+        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+})
+
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
     @BeforeClass
     @Parameters("browser")
     public void setupBrowser(@Optional("chrome") String browser) {
+        System.setProperty("browser",browser);
         DriverFactory.setBrowserName(browser);
     }
 

@@ -1,0 +1,10 @@
+<extentreports>
+    <configuration>
+        <theme>dark</theme>
+        <encoding>utf-8</encoding>
+        <documentTitle>Coursera Automation</documentTitle>
+        <reportName>Cucumber Test Execution</reportName>
+        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+        <timelineEnabled>true</timelineEnabled>
+    </configuration>
+</extentreports>

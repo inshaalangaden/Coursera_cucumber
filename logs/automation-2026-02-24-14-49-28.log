@@ -1,0 +1,21 @@
+24-02-2026 14:49:27 INFO  HomePage           - PAGE: Searching for: Selenium
+24-02-2026 14:49:32 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+24-02-2026 14:49:36 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+24-02-2026 14:49:40 INFO  HomePage           - PAGE: Searching for: java
+24-02-2026 14:49:45 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+24-02-2026 14:49:49 INFO  HomePage           - PAGE: Searching for: java
+24-02-2026 14:49:53 INFO  HomePage           - PAGE: Searching for: Automation
+24-02-2026 14:49:55 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+24-02-2026 14:49:57 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+24-02-2026 14:50:01 INFO  HomePage           - PAGE: Searching for: Automation
+24-02-2026 14:50:05 INFO  HomePage           - PAGE: Hover over explore link
+24-02-2026 14:50:05 INFO  HomePage           - PAGE: Selecting Python from explore
+24-02-2026 14:50:08 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+24-02-2026 14:50:11 INFO  PythonPage         - PAGE: Click the first course
+24-02-2026 14:50:11 INFO  PythonPage         - PAGE: Switching tab after clicking first Python course
+24-02-2026 14:50:11 INFO  PythonPage         - PAGE: Printing the level of the course in console
+24-02-2026 14:50:16 INFO  HomePage           - PAGE: Hover over explore link
+24-02-2026 14:50:16 INFO  HomePage           - PAGE: Selecting Python from explore
+24-02-2026 14:50:20 INFO  PythonPage         - PAGE: Click the first course
+24-02-2026 14:50:20 INFO  PythonPage         - PAGE: Switching tab after clicking first Python course
+24-02-2026 14:50:20 INFO  PythonPage         - PAGE: Printing the level of the course in console
