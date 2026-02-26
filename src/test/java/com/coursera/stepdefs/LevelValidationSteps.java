@@ -29,6 +29,7 @@ public class LevelValidationSteps {
 
     @Then("validate if the page contains {string} in it")
     public void validate_if_the_page_contains_in_it(String levelText) {
+        pp.switchTab();
         String level = pp.extractLevel();
         Assert.assertTrue(level.toLowerCase().contains(levelText),"Course level is "+ level+". So test is PASSED");
     }

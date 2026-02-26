@@ -12,7 +12,7 @@ public class CourseSearchSteps{
 
     @Given("User is on the Home page")
     public void user_is_on_the_home_page() {
-        //user is on the home page
+        DriverFactory.launchWebsite();
     }
     @When("User search a {string} in the search input")
     public void user_search_a_in_the_search_input(String keyWord) {

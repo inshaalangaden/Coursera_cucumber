@@ -23,7 +23,7 @@ public class PythonPage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(pythonCourse)).click();
     }
 
-    public String extractLevel(){
+    public void switchTab(){
         log.info("PAGE: Switching tab after clicking first Python course");
         String current_tab = driver.getWindowHandle();
         for(String handle: driver.getWindowHandles()){
@@ -32,6 +32,9 @@ public class PythonPage extends BasePage {
             }
         }
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+    }
+
+    public String extractLevel(){
         log.info("PAGE: Printing the level of the course in console");
         String level =wait.until(ExpectedConditions.visibilityOfElementLocated(levelLocator)).getText();
         return level;

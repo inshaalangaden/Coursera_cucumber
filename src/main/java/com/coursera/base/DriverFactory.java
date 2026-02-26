@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-import java.time.Duration;
-
 public class DriverFactory {
     //protected static final Logger log = LogManager.getLogger(this.getClass());
     protected static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
@@ -36,10 +34,11 @@ public class DriverFactory {
         }
 
         driverThread.set(localDriver);
+    }
+    public static void launchWebsite(){
         getDriver().get("https://www.coursera.org/");
         getDriver().manage().window().maximize();
         getDriver().manage().deleteAllCookies();
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     public static void quitDriver(){
