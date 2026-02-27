@@ -1,18 +1,15 @@
 package com.coursera.pages;
 
+import com.coursera.annotations.Web;
 import com.coursera.base.BasePage;
-import com.coursera.utils.WebInitializer;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import com.coursera.annotations.Web;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage {
     public HomePage(WebDriver driver){
         super(driver);
-        WebInitializer.init(driver,this);
     }
 
     //Web elements
@@ -32,7 +29,7 @@ public class HomePage extends BasePage {
     //Methods
     public void search(String text){
         log.info("PAGE: Searching for: {}", text);
-        searchInput.sendKeys(text);
+        type(searchInput,text);
         searchInput.sendKeys(Keys.ENTER);
     }
 
@@ -44,11 +41,11 @@ public class HomePage extends BasePage {
 
     public void selectPython(String category){
         log.info("PAGE: Selecting "+category+" from explore");
-        wait.until(ExpectedConditions.elementToBeClickable(pythonLink)).click();
+        click(pythonLink);
     }
 
     public void navigateToUniversities(){
         log.info("PAGE: Navigating to forUniversities page");
-        forUniversities.click();
+        click(forUniversities);
     }
 }

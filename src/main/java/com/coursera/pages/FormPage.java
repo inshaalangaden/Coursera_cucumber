@@ -2,10 +2,8 @@ package com.coursera.pages;
 
 import com.coursera.annotations.Web;
 import com.coursera.base.BasePage;
-import com.coursera.utils.WebInitializer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
@@ -15,7 +13,6 @@ public class FormPage extends BasePage {
 
     public FormPage(WebDriver driver){
         super(driver);
-        WebInitializer.init(driver,this);
     }
 
     @Web(id="FirstName")
@@ -58,41 +55,33 @@ public class FormPage extends BasePage {
     public void fillForm(String fName, String lName, String mail, String phone, String instType, String instName, String role, String dpmt, String need, String cntry){
         log.info("PAGE: Filling the form");
 
-        firstName.sendKeys(fName);
-        lastName.sendKeys(lName);
-        email.sendKeys(mail);
-        phoneNumber.sendKeys(phone);
-        institutionName.sendKeys(instName);
+        type(firstName, fName);
+        type(lastName, lName);
+        type(email, mail);
+        type(phoneNumber, phone);
+        type(institutionName, instName);
 
-        Select s1 = new Select(institutionType);
-        s1.selectByVisibleText(instType);
+        select(institutionType, instType);
+        select(jobRole, role);
+        select(department, dpmt);
+        select(needs, need);
+        select(country, cntry);
 
-        Select s2 = new Select(jobRole);
-        s2.selectByVisibleText(role);
-
-        Select s3 = new Select(department);
-        s3.selectByVisibleText(dpmt);
-
-        Select s4 = new Select(needs);
-        s4.selectByVisibleText(need);
-
-        Select s5 = new Select(country);
-        s5.selectByVisibleText(cntry);
     }
 
     public void clickSubmit(){
         log.info("PAGE: Click submit button");
-        submitButton.click();
+        click(submitButton);
     }
     public boolean isAlertPresent(){
         log.info("PAGE: Return the alert");
-        return !(alertElement.isEmpty()); //this can crash..BEWARE!!!!!
+        return !(alertElement.isEmpty());
     }
 
     public String getAlert() {
         log.info("PAGE: Return alert message if the alert is present");
 
-        if (isAlertPresent()) return alertElement.get(0).getText();
+        if (isAlertPresent()) return getText(alertElement.get(0));
         else{
             return "No error present";
         }

@@ -13,38 +13,35 @@ import java.io.IOException;
 public class ExcelUtils {
 
     public static Object[][] getTestData(String filePath, String sheetName) throws IOException {
-        FileInputStream fis = new FileInputStream(filePath);
-        XSSFWorkbook workbook = new XSSFWorkbook(fis);
-        XSSFSheet sheet = workbook.getSheet(sheetName);
+        try(FileInputStream fis = new FileInputStream(filePath);
+        XSSFWorkbook workbook = new XSSFWorkbook(fis);){
+            XSSFSheet sheet = workbook.getSheet(sheetName);
 
-        int rowCount = sheet.getLastRowNum();
-        int colCount = 12;
+            int rowCount = sheet.getLastRowNum();
+            int colCount = 12;
 
-        Object[][] data = new Object[rowCount][colCount];
+            Object[][] data = new Object[rowCount][colCount];
 
-        DataFormatter formatter = new DataFormatter();
+            DataFormatter formatter = new DataFormatter();
 
-        for (int i = 0; i < rowCount; i++) {
-            Row row = sheet.getRow(i + 1);
-            for (int j = 0; j < colCount; j++) {
-                if(row != null && row.getCell(j) != null) {
-                    data[i][j] = formatter.formatCellValue(row.getCell(j));
-                }else{
-                    data[i][j] = null;                }
+            for (int i = 0; i < rowCount; i++) {
+                Row row = sheet.getRow(i + 1);
+                for (int j = 0; j < colCount; j++) {
+                    if(row != null && row.getCell(j) != null) {
+                        data[i][j] = formatter.formatCellValue(row.getCell(j));
+                    }else{
+                        data[i][j] = "";                }
+                }
             }
+            return data;
         }
-        return data;
     }
 
     public static void setCellData(String filePath, String sheetName, int rowNum, String status, String browser) throws IOException {
         XSSFWorkbook workbook = null;
-        try{
-            FileInputStream fis = new FileInputStream(filePath);
+        try(FileInputStream fis = new FileInputStream(filePath);){
             workbook = new XSSFWorkbook(fis);
-        }catch(Exception e){
-            e.printStackTrace();
         }
-
         XSSFSheet sheet = workbook.getSheet(sheetName);
 
         Row headerRow = sheet.getRow(0);

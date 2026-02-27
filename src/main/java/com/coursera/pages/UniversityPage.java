@@ -17,7 +17,7 @@ public class UniversityPage extends BasePage {
 
     public void clickContactUs(){
         log.info("PAGE: Click contactUs button");
-        contactUs.click();
+        click(contactUs);
     }
 
 }
