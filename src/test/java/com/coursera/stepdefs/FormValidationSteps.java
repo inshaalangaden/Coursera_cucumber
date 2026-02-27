@@ -82,7 +82,7 @@ public class FormValidationSteps {
 
         ExcelUtils.setCellData(filePath, sheetName, currentRow, resultMessage,DriverFactory.getBrowser());
 
-        Assert.assertTrue(testPassed, resultMessage);
+        Assert.assertTrue(testPassed,"test "+ resultMessage);
     }
 
     private String safe(Object obj){

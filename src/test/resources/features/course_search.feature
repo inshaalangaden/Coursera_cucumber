@@ -7,5 +7,5 @@ Feature: Search in the input box and get the course
     | keyword |
     | Selenium |
     | java     |
-    | Automation |
+    | Cucumber |
 

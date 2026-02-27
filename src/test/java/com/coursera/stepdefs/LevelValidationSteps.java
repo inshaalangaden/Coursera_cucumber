@@ -9,11 +9,12 @@ import org.testng.Assert;
 
 public class LevelValidationSteps {
 
-    HomePage hp = new HomePage(DriverFactory.getDriver());
-    PythonPage pp = new PythonPage(DriverFactory.getDriver());
+    HomePage hp;
+    PythonPage pp;
 
     @When("User navigate to explore page")
     public void user_navigate_to_explore_page() {
+        hp = new HomePage(DriverFactory.getDriver());
         hp.hoverExplore();
     }
 
@@ -24,6 +25,7 @@ public class LevelValidationSteps {
 
     @When("Select the first course")
     public void select_the_first_course() {
+        pp = new PythonPage(DriverFactory.getDriver());
         pp.selectCourse();
     }
 
@@ -31,6 +33,7 @@ public class LevelValidationSteps {
     public void validate_if_the_page_contains_in_it(String levelText) {
         pp.switchTab();
         String level = pp.extractLevel();
-        Assert.assertTrue(level.toLowerCase().contains(levelText),"Course level is "+ level+". So test is PASSED");
+        System.out.println(level);
+        Assert.assertTrue(level.toLowerCase().contains(levelText),"Validation Failed!");
     }
 }

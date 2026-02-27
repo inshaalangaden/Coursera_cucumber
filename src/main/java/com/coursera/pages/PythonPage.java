@@ -1,21 +1,25 @@
 package com.coursera.pages;
 
+import com.coursera.annotations.Web;
 import com.coursera.base.BasePage;
-import org.openqa.selenium.By;
+import com.coursera.utils.WebInitializer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class PythonPage extends BasePage {
     public PythonPage(WebDriver driver){
         super(driver);
-        PageFactory.initElements(driver,this);
+        WebInitializer.init(driver,this);
     }
 
-    @FindBy(css="div.cds-CommonCard-clickArea:first-of-type") WebElement pythonCourse;
-    By levelLocator = By.xpath("//div[@class='css-6mrk5o']//div[contains(text(),'level')] | (//div[contains(@class, 'css-fk6qfz') and contains(text(), 'level')])[2]");
+    @Web(css="div.cds-CommonCard-clickArea:first-of-type")
+    private WebElement pythonCourse;
+
+    @Web(xpath="//div[@class='css-6mrk5o']//div[contains(text(),'level')] | (//div[contains(@class, 'css-fk6qfz') and contains(text(), 'level')])[2]")
+    private WebElement levelElement;
+
+    //By levelLocator = By.xpath("//div[@class='css-6mrk5o']//div[contains(text(),'level')] | (//div[contains(@class, 'css-fk6qfz') and contains(text(), 'level')])[2]");
 
     public void selectCourse(){
         log.info("PAGE: Click the first course");
@@ -36,7 +40,8 @@ public class PythonPage extends BasePage {
 
     public String extractLevel(){
         log.info("PAGE: Printing the level of the course in console");
-        String level =wait.until(ExpectedConditions.visibilityOfElementLocated(levelLocator)).getText();
+        wait.until(ExpectedConditions.textToBePresentInElement(levelElement,"level"));
+        String level = levelElement.getText();
         return level;
     }
 }

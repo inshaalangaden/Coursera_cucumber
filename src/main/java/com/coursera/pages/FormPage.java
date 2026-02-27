@@ -1,33 +1,59 @@
 package com.coursera.pages;
 
+import com.coursera.annotations.Web;
 import com.coursera.base.BasePage;
-import org.openqa.selenium.By;
+import com.coursera.utils.WebInitializer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
+
 
 public class FormPage extends BasePage {
 
 
     public FormPage(WebDriver driver){
         super(driver);
-        PageFactory.initElements(driver,this);
+        WebInitializer.init(driver,this);
     }
 
-    @FindBy(id="FirstName") WebElement firstName;
-    @FindBy(id="LastName") WebElement lastName;
-    @FindBy(id="Email") WebElement email;
-    @FindBy(id="Phone") WebElement phoneNumber;
-    @FindBy(id="Institution_Type__c") WebElement institutionType;
-    @FindBy(id="Company") WebElement institutionName;
-    @FindBy(id="Title") WebElement jobRole;
-    @FindBy(id="Department") WebElement department;
-    @FindBy(id="Self_Reported_Needs__c") WebElement needs;
-    @FindBy(id="Country") WebElement country;
-    @FindBy(css= "button[type='submit']") WebElement submitButton;
-    By alertLocator = By.cssSelector("div[role='alert']");
+    @Web(id="FirstName")
+    private WebElement firstName;
+
+    @Web(id="LastName")
+    private WebElement lastName;
+
+    @Web(id="Email")
+    private WebElement email;
+
+    @Web(id="Phone")
+    private WebElement phoneNumber;
+
+    @Web(id="Institution_Type__c")
+    private WebElement institutionType;
+
+    @Web(id="Company")
+    private WebElement institutionName;
+
+    @Web(id="Title")
+    private WebElement jobRole;
+
+    @Web(id="Department")
+    private WebElement department;
+
+    @Web(id="Self_Reported_Needs__c")
+    private WebElement needs;
+
+    @Web(id="Country")
+    private WebElement country;
+
+    @Web(css= "button[type='submit']")
+    private WebElement submitButton;
+
+    @Web(xpath="//div[@role='alert']")
+    private List<WebElement> alertElement;
+
 
     public void fillForm(String fName, String lName, String mail, String phone, String instType, String instName, String role, String dpmt, String need, String cntry){
         log.info("PAGE: Filling the form");
@@ -60,13 +86,13 @@ public class FormPage extends BasePage {
     }
     public boolean isAlertPresent(){
         log.info("PAGE: Return the alert");
-        return !(driver.findElements(alertLocator).isEmpty());
+        return !(alertElement.isEmpty()); //this can crash..BEWARE!!!!!
     }
 
     public String getAlert() {
         log.info("PAGE: Return alert message if the alert is present");
 
-        if (isAlertPresent()) return driver.findElement(alertLocator).getText();
+        if (isAlertPresent()) return alertElement.get(0).getText();
         else{
             return "No error present";
         }
