@@ -11,7 +11,10 @@ public class PythonPage extends BasePage {
         super(driver);
     }
 
-    @Web(css="div.cds-CommonCard-clickArea:first-of-type")
+//    @Web(css="div.cds-CommonCard-clickArea:first-of-type")
+//    private WebElement pythonCourse;
+
+    @Web(xpath="(//div[@class='cds-CommonCard-clickArea'])[1]")
     private WebElement pythonCourse;
 
     @Web(xpath="//div[@class='css-6mrk5o']//div[contains(text(),'level')] | (//div[contains(@class, 'css-fk6qfz') and contains(text(), 'level')])[2]")

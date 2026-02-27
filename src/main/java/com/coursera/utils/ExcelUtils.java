@@ -37,38 +37,42 @@ public class ExcelUtils {
         }
     }
 
-    public static void setCellData(String filePath, String sheetName, int rowNum, String status, String browser) throws IOException {
+    public static synchronized void setCellData(String filePath, String sheetName, int rowNum, String status, String browser) throws IOException {
         XSSFWorkbook workbook = null;
-        try(FileInputStream fis = new FileInputStream(filePath);){
+        try {
+            FileInputStream fis = new FileInputStream(filePath);
             workbook = new XSSFWorkbook(fis);
-        }
-        XSSFSheet sheet = workbook.getSheet(sheetName);
 
-        Row headerRow = sheet.getRow(0);
+            XSSFSheet sheet = workbook.getSheet(sheetName);
 
-        String columnName = browser.toUpperCase()+"_Result";
-        int resultCol = -1;
-        for(int i=0; i<headerRow.getLastCellNum();i++){
-            if(headerRow.getCell(i).getStringCellValue().equalsIgnoreCase(columnName)){
-                resultCol = i;
-                break;
+            Row headerRow = sheet.getRow(0);
+
+            String columnName = browser.toUpperCase() + "_Result";
+            int resultCol = -1;
+            for (int i = 0; i < headerRow.getLastCellNum(); i++) {
+                if (headerRow.getCell(i).getStringCellValue().equalsIgnoreCase(columnName)) {
+                    resultCol = i;
+                    break;
+                }
             }
-        }
-        if(resultCol == -1){
-            resultCol = headerRow.getLastCellNum();
-            headerRow.createCell(resultCol).setCellValue(columnName);
-        }
+            if (resultCol == -1) {
+                resultCol = headerRow.getLastCellNum();
+                headerRow.createCell(resultCol).setCellValue(columnName);
+            }
 
-        Row row = sheet.getRow(rowNum);
-        if (row == null) row = sheet.createRow(rowNum);
-        Cell cell = row.createCell(resultCol);
-        cell.setCellValue(status);
+            Row row = sheet.getRow(rowNum);
+            if (row == null) row = sheet.createRow(rowNum);
+            Cell cell = row.createCell(resultCol);
+            cell.setCellValue(status);
 
-        // Explicitly write the changes back to the file
-        try (FileOutputStream fos = new FileOutputStream(filePath)) {
-            workbook.write(fos);
+            // Explicitly write the changes back to the file
+            try (FileOutputStream fos = new FileOutputStream(filePath)) {
+                workbook.write(fos);
+            }
+
+            workbook.close();
+        }catch (Exception e){
+            e.printStackTrace();
         }
-
-        workbook.close();
     }
 }

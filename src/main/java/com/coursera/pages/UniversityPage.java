@@ -12,7 +12,7 @@ public class UniversityPage extends BasePage {
         WebInitializer.init(driver,this);
     }
 
-    @Web(css = "a[data-click-key='ent_website._campus.click.navigation_priority_cta']")
+    @Web(xpath = "//a[@data-click-key='ent_website._campus.click.navigation_priority_cta']")
     WebElement contactUs;
 
     public void clickContactUs(){

@@ -16,13 +16,13 @@ public class HomePage extends BasePage {
     @Web(id="search-autocomplete-input")
     private WebElement searchInput;
 
-    @Web(css="button[data-testid='megamenu-explore-button']")
+    @Web(xpath="//button[@data-testid='megamenu-explore-button']")
     private WebElement exploreButton;
 
-    @Web(css="a[data-track-href='/courses?query=python'] , a[to='/courses?query=python'] , a[href='/courses?query=python']")
+    @Web(xpath="//a[@data-track-href='/courses?query=python'] | //a[@to='/courses?query=python'] | //a[@href='/courses?query=python']")
     private WebElement pythonLink;
 
-    @Web(css = "a[data-click-key='front_page.front_page_story.click.navigation_meta_nav_Campus']")
+    @Web(xpath = "//a[@data-click-key='front_page.front_page_story.click.navigation_meta_nav_Campus']")
     private WebElement forUniversities;
 
 

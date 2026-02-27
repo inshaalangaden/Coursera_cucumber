@@ -1,11 +1,13 @@
 package com.coursera.base;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class DriverFactory {
-    //protected static final Logger log = LogManager.getLogger(this.getClass());
+    Logger log = LogManager.getLogger(this.getClass());
     protected static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
     protected static ThreadLocal<String> browserThread = new ThreadLocal<>();
 
