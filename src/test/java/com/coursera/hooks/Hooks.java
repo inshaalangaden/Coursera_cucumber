@@ -15,16 +15,6 @@ public class Hooks {
         DriverFactory.initializeDriver();
     }
 
-//    @After(order = 1)
-//
-//    public void attachOnFailure(Scenario scenario) {
-//        if (scenario.isFailed()) {
-//            byte[] png = ((TakesScreenshot) DriverFactory.getDriver())
-//                    .getScreenshotAs(OutputType.BYTES);
-//            scenario.attach(png, "image/png", "Failure Screenshot");
-//        }
-//    }
-
     @After(order = 2)
     public void tearDown(){
         DriverFactory.quitDriver();

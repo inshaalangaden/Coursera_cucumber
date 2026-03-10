@@ -27,7 +27,7 @@ public class WebInitializer {
             if (field.isAnnotationPresent(Web.class) || field.isAnnotationPresent(Webs.class)) {
                 Web[] allWebs = field.getAnnotationsByType(Web.class);
                 Web selectedWeb = (allWebs.length > 0) ? allWebs[0] : null;
-                By locator;
+                //By locator;
 
                 for (Web w : allWebs) {
                     if (w.locale().equalsIgnoreCase(activeLocale)) {

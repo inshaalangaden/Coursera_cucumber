@@ -26,10 +26,8 @@ public class DriverFactory {
         WebDriver localDriver;
 
         if(getBrowser().equalsIgnoreCase("chrome")){
-            //log.info("Setting up the browser: CHROME");
             localDriver = new ChromeDriver();
         } else if (getBrowser().equalsIgnoreCase("edge")) {
-            //log.info("Setting up the browser: EDGE");
             localDriver = new EdgeDriver();
         }else{
             throw new RuntimeException("Browser not supported");
@@ -44,7 +42,6 @@ public class DriverFactory {
     }
 
     public static void quitDriver(){
-        //log.info("Closing the browser");
         if(getDriver() != null) getDriver().quit();
         driverThread.remove();
     }
