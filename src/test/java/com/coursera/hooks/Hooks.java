@@ -7,7 +7,7 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 
-    @Before
+    @Before(order = 0)
     public void setUp(Scenario scenario){
         String browser = DriverFactory.getBrowser().toUpperCase();
         com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter
@@ -15,7 +15,7 @@ public class Hooks {
         DriverFactory.initializeDriver();
     }
 
-    @After(order = 2)
+    @After
     public void tearDown(){
         DriverFactory.quitDriver();
     }

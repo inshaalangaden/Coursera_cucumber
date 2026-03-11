@@ -11,7 +11,8 @@ import org.testng.annotations.Parameters;
         glue = {"com.coursera.stepdefs","com.coursera.hooks"},
         monochrome = true, plugin = {
         "pretty",
-        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+        "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 })
 
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {

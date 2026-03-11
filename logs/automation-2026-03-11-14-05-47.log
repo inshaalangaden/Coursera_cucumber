@@ -1,0 +1,71 @@
+11-03-2026 14:05:47 INFO  HomePage           - PAGE: Searching for: Selenium
+11-03-2026 14:05:50 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+11-03-2026 14:05:52 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+11-03-2026 14:06:02 INFO  HomePage           - PAGE: Searching for: java
+11-03-2026 14:06:03 INFO  HomePage           - PAGE: Searching for: java
+11-03-2026 14:06:08 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+11-03-2026 14:06:10 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+11-03-2026 14:06:19 INFO  HomePage           - PAGE: Searching for: Cucumber
+11-03-2026 14:06:23 INFO  HomePage           - PAGE: Searching for: Cucumber
+11-03-2026 14:06:24 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+11-03-2026 14:06:27 INFO  SearchResultPage   - PAGE: Printing the first course title in the console
+11-03-2026 14:06:34 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:06:38 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:06:45 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:06:46 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:06:53 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:06:53 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:06:57 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:06:57 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:06:58 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:06:58 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:07:11 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:07:11 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:07:19 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:07:23 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:07:25 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:07:25 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:07:35 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:07:43 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:07:47 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:07:51 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:07:51 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:08:02 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:08:08 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:08:11 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:08:13 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:08:14 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:08:24 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:08:32 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:08:37 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:08:39 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:08:40 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:08:49 INFO  HomePage           - PAGE: Hover over explore link
+11-03-2026 14:08:50 INFO  HomePage           - PAGE: Selecting Python from explore
+11-03-2026 14:08:53 INFO  PythonPage         - PAGE: Click the first course
+11-03-2026 14:08:54 INFO  PythonPage         - PAGE: Switching tab after clicking first Python course
+11-03-2026 14:08:54 INFO  PythonPage         - PAGE: Printing the level of the course in console
+11-03-2026 14:08:55 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:09:00 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:09:04 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:09:04 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:09:12 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:09:20 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:09:24 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:09:27 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:09:27 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:09:36 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:09:43 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:09:48 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:09:50 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:09:51 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:10:00 INFO  HomePage           - PAGE: Navigating to forUniversities page
+11-03-2026 14:10:09 INFO  UniversityPage     - PAGE: Click contactUs button
+11-03-2026 14:10:13 INFO  FormPage           - PAGE: Filling the form
+11-03-2026 14:10:16 INFO  FormPage           - PAGE: Click submit button
+11-03-2026 14:10:16 INFO  FormPage           - PAGE: Return the alert
+11-03-2026 14:10:25 INFO  HomePage           - PAGE: Hover over explore link
+11-03-2026 14:10:25 INFO  HomePage           - PAGE: Selecting Python from explore
+11-03-2026 14:10:30 INFO  PythonPage         - PAGE: Click the first course
+11-03-2026 14:10:30 INFO  PythonPage         - PAGE: Switching tab after clicking first Python course
+11-03-2026 14:10:30 INFO  PythonPage         - PAGE: Printing the level of the course in console
